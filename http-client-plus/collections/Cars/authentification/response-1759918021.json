@@ -1,0 +1,21 @@
+{
+  "_id": "68e635f5a587ddc092afab2a",
+  "isForSell": true,
+  "UserID": "JAfred2012",
+  "images": [
+    "images_1759917557359_d-panyukov-DwxlhTvC16Q-unsplash.jpg"
+  ],
+  "marque": "Mercedes",
+  "modele": "Benz",
+  "anneeFabrication": "2002",
+  "fuel": "diesel",
+  "numeroChassis": "56F4SD564FSD6FD",
+  "transmission": "Manuel",
+  "price": "5000",
+  "volant": "gauche",
+  "km": "575000",
+  "porte": "4",
+  "couleur": "jaune",
+  "place": "7",
+  "__v": 0
+}

@@ -1,0 +1,12 @@
+### localhost
+POST localhost:1000/car
+Content-Type: application/json
+
+{
+  "isForSell": false,
+  "UserID": "123ghislain2025",
+  "images": ["joyeux","kashunju"],
+  "video": []
+}
+>> localhost/response-{{$timestamp}}.json
+

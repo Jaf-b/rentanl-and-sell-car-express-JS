@@ -1,0 +1,10 @@
+{
+  "user": {
+    "Username": "Joyeux Kashunju",
+    "Phone": "0465545456463",
+    "IsAdmin": "true",
+    "Email": "joyeux@gmail.com",
+    "Password": "Joyeux@2025",
+    "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2OGU2MzUyNGI0OGNjMGY2N2EzYzYwOTMiLCJpYXQiOjE3NTk5MTczNDksImV4cCI6MTc2MDE3NjU0OX0.zLx2-M9Yp-luUUDEDHi2JAl5wc8uiGfOopyWTrDVmGw"
+  }
+}

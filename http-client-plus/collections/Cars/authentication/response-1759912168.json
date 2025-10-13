@@ -1,0 +1,10 @@
+{
+  "user": {
+    "Username": "Jafred Bukulu",
+    "Phone": "0991465360",
+    "IsAdmin": "true",
+    "Email": "Jafredtshikaya@gmail.com",
+    "Password": "Jafred@2025",
+    "Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2OGU2MjBlODkwY2JmMWI4MTgxMTdiN2UiLCJpYXQiOjE3NTk5MTIxNjgsImV4cCI6MTc2MDE3MTM2OH0.rDvX1WfzWbcm1ztyO_InlAhMMzg8A_rv1F2Dj9Us3S0"
+  }
+}

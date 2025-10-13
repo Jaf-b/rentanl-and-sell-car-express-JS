@@ -1,0 +1,52 @@
+{
+  "cars": [
+    {
+      "_id": "68de1c3cc952cb7714477232",
+      "isForSell": false,
+      "UserID": "123jafred2025",
+      "images": [
+        {
+          "name": "Jafred"
+        },
+        {
+          "secondName": "Bukulu"
+        }
+      ],
+      "video": [],
+      "__v": 0
+    },
+    {
+      "_id": "68e4d031f76a1d16707015de",
+      "isForSell": false,
+      "UserID": "123jafred2025",
+      "images": [
+        "joyeux",
+        "kashunju"
+      ],
+      "video": [],
+      "__v": 0
+    },
+    {
+      "_id": "68e4d164b2a8f4f9ef88aa2d",
+      "isForSell": false,
+      "UserID": "123jafred2025",
+      "images": [
+        "joyeux",
+        "kashunju"
+      ],
+      "video": [],
+      "__v": 0
+    },
+    {
+      "_id": "68e4d18567b3bfe1d806af05",
+      "isForSell": false,
+      "UserID": "123ghislain2025",
+      "images": [
+        "joyeux",
+        "kashunju"
+      ],
+      "video": [],
+      "__v": 0
+    }
+  ]
+}

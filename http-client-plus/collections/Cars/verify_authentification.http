@@ -1,0 +1,5 @@
+### verify authentification
+GET localhost:1000/shop/68e63524b48cc0f67a3c6093
+
+>> verify_authentification/response-{{$timestamp}}.json
+

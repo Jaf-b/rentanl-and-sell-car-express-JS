@@ -1,0 +1,10 @@
+### authentication
+POST localhost:1000/login
+Content-Type: application/json
+
+{
+  "email": "Jafredtshikaya@gmail.com",
+  "password": "Jafred@2025"
+}
+>> authentication/response-{{$timestamp}}.json
+

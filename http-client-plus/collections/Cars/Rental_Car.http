@@ -1,0 +1,18 @@
+### Rental Car
+GET localhost:1000/car/68de1c3cc952cb7714477232
+Content-Type: application/json
+
+{
+  "isForSell" : "false",
+  "UserID": "123jafred2025",
+  "images": [
+    {
+      "name": "Jafred"
+    },
+    {
+      "secondName": "Bukulu"
+    }
+  ]
+}
+>> Rental_Car/response-{{$timestamp}}.json
+

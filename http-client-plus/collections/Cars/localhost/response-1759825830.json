@@ -1,0 +1,19 @@
+{
+  "cars": [
+    {
+      "_id": "68de1c3cc952cb7714477232",
+      "isForSell": false,
+      "UserID": "123jafred2025",
+      "images": [
+        {
+          "name": "Jafred"
+        },
+        {
+          "secondName": "Bukulu"
+        }
+      ],
+      "video": [],
+      "__v": 0
+    }
+  ]
+}
