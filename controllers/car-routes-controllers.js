@@ -64,6 +64,17 @@ const AddCar = async (req, res) => {
   }
 };
 const UpdateCar = (req, res) => {};
-const DeleteCar = (req, res) => {};
+const DeleteCar = async (req, res) => {
+  const id = req.params.CarID;
+  try {
+    if (!id) {
+      res.status(404).json({ error: 'id not found' });
+    }
+    const resultat = await CarSchema.findByIdAndDelete(id);
+    res.json(resultat);
+  } catch (e) {
+    res.status(404).json({ error: e.message });
+  }
+};
 
 module.exports = { GetCar, GetCarByShopID, GetCarById, AddCar, UpdateCar, DeleteCar };

@@ -5,6 +5,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const Route = require('./routes/index-route');
+const EmailService = require('./services/email-service');
 
 // initialize the app
 
