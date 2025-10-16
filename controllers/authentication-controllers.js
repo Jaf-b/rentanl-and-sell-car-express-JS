@@ -47,7 +47,7 @@ const RegistrationPost = async (req, res) => {
       CreatedAt,
     });
     const jwt = createToken(user._id);
-    res.cookie('jwt', jwt, { httpOnly: true, maxAge: maxAge * 1000 });
+    res.cookie('jwt', jwt, { httpOnly: true, maxAge: maxAge * 1000000 });
     res
       .status(200)
       .json({ user: { ProfilePicture, Username, Phone, IsAdmin, Email, Password, Token: jwt } });

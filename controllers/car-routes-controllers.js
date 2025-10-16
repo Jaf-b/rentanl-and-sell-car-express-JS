@@ -18,7 +18,7 @@ const GetCarByShopID = async (req, res) => {
       res.json({ error: 'ShopID is not valid' });
     }
     try {
-      const city = await CarSchema.findById({ ShopID });
+      const city = await CarSchema.find({ ShopID: ShopID });
       res.json(city);
     } catch (e) {
       console.log(e);

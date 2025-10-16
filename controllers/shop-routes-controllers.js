@@ -8,6 +8,7 @@ const GetShopByUserID = async (req, res) => {
   }
   try {
     const shop = await ShopSchema.findOne({ UserID: ID });
+    console.log(shop);
     if (!shop) res.json({ error: 'Shop not found' });
     res.json(shop);
   } catch (e) {

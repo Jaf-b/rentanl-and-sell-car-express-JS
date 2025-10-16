@@ -1,7 +1,9 @@
 const jwt = require('jsonwebtoken');
 
 const IsAuthenticated = (req, res, next) => {
-  const CookieToken = req.cookies.jwt;
+  //recuperer le token
+  const authHeader = req.headers['authorization'];
+  const CookieToken = authHeader.split(' ')[1];
   const isTokenExist = !!CookieToken;
 
   if (isTokenExist) {
