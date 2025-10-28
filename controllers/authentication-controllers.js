@@ -19,10 +19,7 @@ const LoginPost = async (req, res) => {
     res.cookie('jwt', jwt, { httpOnly: true, maxAge: maxAge * 1000 });
     res.status(200).json({
       UserID: user._id,
-      Username: user.Username,
       email: user.Email,
-      phone: user.Phone,
-      ProfilePicture: user.ProfilePicture,
       IsAdmin: user.IsAdmin,
       Token: jwt,
     });
@@ -34,23 +31,24 @@ const LoginPost = async (req, res) => {
 };
 
 const RegistrationPost = async (req, res) => {
-  const { Username, Phone, IsAdmin, Email, Password, CreatedAt } = req.body;
-  const ProfilePicture = req.filename;
+  const { IsAdmin,email, password, CreatedAt } = req.body;
   try {
     const user = await UserSchema.create({
-      ProfilePicture,
-      Username,
-      Phone,
       IsAdmin,
-      Email,
-      Password,
+      Email: email,
+      Password: password,
       CreatedAt,
     });
     const jwt = createToken(user._id);
     res.cookie('jwt', jwt, { httpOnly: true, maxAge: maxAge * 1000 });
     res
       .status(200)
-      .json({ user: { ProfilePicture, Username, Phone, IsAdmin, Email, Password, Token: jwt } });
+      .json({
+        UserID: user._id,
+        email: user.Email,
+        IsAdmin: user.IsAdmin,
+        Token: jwt
+      });
   } catch (err) {
     const errMsg = { msg: 'problème survenu' };
     res.json({ errMsg });

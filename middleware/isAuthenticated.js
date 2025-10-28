@@ -1,11 +1,12 @@
 const jwt = require('jsonwebtoken');
 
 const IsAuthenticated = (req, res, next) => {
-  const CookieToken = req.cookies.jwt;
-  const isTokenExist = !!CookieToken;
+  const authHeader = req.headers["authorization"];
+  const token = authHeader && authHeader.split(" ")[1];
+  const isTokenExist = !!token;
 
   if (isTokenExist) {
-    jwt.verify(CookieToken, process.env.JWT_SECRET, async (err, decoded) => {
+    jwt.verify(token, process.env.JWT_SECRET, async (err, decoded) => {
       if (err) {
         res.json({ error: 'Invalid Token' });
         return false;

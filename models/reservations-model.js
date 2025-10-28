@@ -9,7 +9,7 @@ const ReservationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  Payment: {
+  ShopID: {
     type: String,
     required: true,
   },

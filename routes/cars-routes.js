@@ -14,8 +14,8 @@ const CarRoute = Router();
 
 CarRoute.get('/car', GetCar);
 CarRoute.get('/car/:CarID', GetCarById);
-CarRoute.get('/car/shop/:ShopID', IsAuthenticated, GetCarByShopID);
-CarRoute.post('/car', IsAuthenticated, uploadImage, AddCar);
+CarRoute.get('/car/shop/:ShopID', GetCarByShopID);
+CarRoute.post('/car', uploadImage, AddCar);
 CarRoute.put('/car/:CarID', IsAuthenticated, UpdateCar);
 CarRoute.delete('/car/:CarID', IsAuthenticated, DeleteCar);
 

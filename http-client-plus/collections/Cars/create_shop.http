@@ -1,5 +1,0 @@
-### create shop
-GET localhost:1000/shop/68e63524b48cc0f67a3c6093
-
->> create_shop/response-{{$timestamp}}.json
-

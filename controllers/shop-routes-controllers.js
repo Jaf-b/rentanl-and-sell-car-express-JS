@@ -28,14 +28,36 @@ const AddShop = async (req, res) => {
     res.json({ error: 'something went wrong' });
   }
 };
-const UpdateShop = (req, res) => {
-  if (!mongoose.isValidObjectId(ID)) {
-    res.json({ error: 'Shop not found' });
+const UpdateShop = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.isValidObjectId(id)) {
+    return res.status(400).json({ error: 'Invalid shop ID' });
+  }
+
+  try {
+    const updatedShop = await ShopSchema.findByIdAndUpdate(id, req.body, { new: true });
+    if (!updatedShop) {
+      return res.status(404).json({ message: 'Shop not found.' });
+    }
+    res.status(200).json(updatedShop);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
-const DeleteShop = (req, res) => {
-  if (!mongoose.isValidObjectId(ID)) {
-    res.json({ error: 'Shop not found' });
+const DeleteShop = async (req, res) => {
+  const { id } = req.params;
+  if (!mongoose.isValidObjectId(id)) {
+    return res.status(400).json({ error: 'Invalid shop ID' });
+  }
+
+  try {
+    const deletedShop = await ShopSchema.findByIdAndDelete(id);
+    if (!deletedShop) {
+      return res.status(404).json({ message: 'Shop not found.' });
+    }
+    res.status(200).json({ message: 'Shop deleted successfully.' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
   }
 };
 

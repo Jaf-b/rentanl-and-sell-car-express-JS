@@ -1,5 +1,0 @@
-### RentalCar
-GET localhost:1000/car
-
->> RentalCar/response-{{$timestamp}}.json
-

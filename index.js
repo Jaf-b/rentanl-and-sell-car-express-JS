@@ -1,10 +1,12 @@
 require('dotenv').config();
-
+const  nodemailer = require('nodemailer');
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const cookieParser = require('cookie-parser');
 const Route = require('./routes/index-route');
+const generateValidationCode = require('./helper/generate-validation-code');
+const { sendVerificationEmail } = require('./config/email-config');
 
 // initialize the app
 
@@ -32,7 +34,7 @@ app.use(express.static('./uploads/img/cars'));
 
 //initialisation de la route principale
 
-app.get('/', (req, res) => {
+app.get('/',  async (req, res) => {
   res.json({
     body: 'Hello World!',
   });
